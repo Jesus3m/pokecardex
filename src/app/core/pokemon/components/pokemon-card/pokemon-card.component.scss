@@ -1,0 +1,38 @@
+.pokemon-card {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 3px solid rgb(66, 66, 66) ;
+  overflow: hidden;
+  & .pokeball {
+    width: 100%;
+    height: 100%;
+    & .red-side {
+      width: 100%;
+      height: 50%;
+      background: red;
+      border-bottom: 3px solid rgb(66, 66, 66);
+    }
+    & .white-side {
+      width: 100%;
+      height: 50%;
+      background: white;
+    }
+    & .poke-eye {
+      border: 3px solid rgb(66, 66, 66);
+      top: calc(50% - 35px);
+      left: calc(50% - 35px);
+      position: absolute;
+      overflow: hidden;
+      height: 70px;
+      width: 70px;
+      border-radius: 100%;
+      background: white;
+      display: flex;
+    }
+  }
+}
+h3{
+  text-align: center;
+}

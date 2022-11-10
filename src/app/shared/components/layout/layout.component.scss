@@ -1,0 +1,51 @@
+@import '../../styles/colors';
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $main-back;
+
+
+  & nav {
+    color: $contrast-text;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    background: $dark-back;
+
+    & .logo {
+      width: 20%;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      align-items: center;
+    }
+
+    & .options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      & .avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 800;
+        color: $contrast-text;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        background: linear-gradient(45deg, $primary-light, $second-light);
+        cursor: pointer;
+      }
+    }
+  }
+
+
+  & section {
+    padding: 20px 10px;
+  }
+}
