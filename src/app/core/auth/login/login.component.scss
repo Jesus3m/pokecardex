@@ -1,0 +1,15 @@
+@import '../../../shared/styles/colors';
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  height: auto;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+
+}

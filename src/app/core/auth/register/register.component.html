@@ -1,0 +1,23 @@
+<form [formGroup]="registerGroup" (ngSubmit)="onSubmit()">
+  <h2>Become the best coach</h2>
+    <rocket-input name="name" label="Name" >
+      <input class="input-control" type="text" name="name" formControlName="name">
+      <input class="input-control" type="text" name="lastName" formControlName="lastName">
+    </rocket-input>
+    <rocket-input name="nickname" label="Nick Name" >
+      <input class="input-control" type="text" name="nickname" formControlName="nickname">
+    </rocket-input>
+    <rocket-input name="email" label="Email" >
+      <input class="input-control" type="text" name="email" formControlName="email">
+    </rocket-input>
+    <rocket-input name="pass" label="Password" >
+      <input class="input-control" type="password" name="password" formControlName="password">
+    </rocket-input>
+    <rocket-input name="confirm-pass" label="Confirm Password" >
+      <input class="input-control" type="password" name="password" formControlName="password">
+    </rocket-input>
+    <rocket-input name="team" label="Team" >
+      <input class="input-control" type="password" name="team" formControlName="team">
+    </rocket-input>
+    <button class="button-control" type="submit">Register</button>
+</form>

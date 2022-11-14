@@ -1,0 +1,13 @@
+<form [formGroup]="loginGroup" (ngSubmit)="onSubmit()">
+  <h2>Sign In! and know each pokemon</h2>
+    <rocket-input name="user" label="User or email" >
+      <input class="input-control" type="text" name="user" formControlName="user">
+    </rocket-input>
+    <rocket-input name="pass" label="Password" >
+      <input class="input-control" type="password" name="pass" formControlName="pass">
+    </rocket-input>
+    <button class="button-control" type="submit">Enviar</button>
+    <span>
+     Do yo not have an account?  <a routerLink="/auth/register">register now here</a>
+    </span>
+</form>

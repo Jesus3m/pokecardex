@@ -1,38 +1,74 @@
+@import '../../../../shared/styles/colors';
+$transition: .3s all ease-in-out;
 .pokemon-card {
   position: relative;
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  border: 3px solid rgb(66, 66, 66) ;
   overflow: hidden;
+  cursor: pointer;
   & .pokeball {
     width: 100%;
     height: 100%;
     & .red-side {
       width: 100%;
       height: 50%;
-      background: red;
+      background: rgb(148, 14, 14);
       border-bottom: 3px solid rgb(66, 66, 66);
+      transition: $transition;
     }
     & .white-side {
       width: 100%;
       height: 50%;
       background: white;
+      border-top: 3px solid rgb(66, 66, 66);
+      transition: $transition;
+
     }
     & .poke-eye {
+      display: flex;
       border: 3px solid rgb(66, 66, 66);
-      top: calc(50% - 35px);
-      left: calc(50% - 35px);
+      top: calc(50% - 25px);
+      left: calc(50% - 25px);
       position: absolute;
       overflow: hidden;
-      height: 70px;
-      width: 70px;
+      height: 50px;
+      width: 50px;
       border-radius: 100%;
-      background: white;
-      display: flex;
+      background: rgb(241, 240, 231);
+      transition: $transition;
+    }
+  }
+  &:hover {
+    border-radius: 8px;
+    & .red-side {
+      transform: rotateZ(90deg) translate(-25%, -150%);
+    }
+    & .white-side {
+      transform: rotateZ(-90deg) translate(-25%, 150%);
+
+     }
+  }
+
+  &:hover .poke-eye {
+    flex-direction: column;
+    align-items: center;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 8px !important;
+    position: absolute !important;
+    background-color: white !important;
+    height: 100% !important;
+    width: 100% !important;
+    border: none !important;
+    & img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
+
 h3{
   text-align: center;
+  color: $main-text;
 }

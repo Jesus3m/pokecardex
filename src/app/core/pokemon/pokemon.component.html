@@ -2,23 +2,12 @@
 <section >
   <div class="search">
     <h3>Elije a tu pokemon!!!</h3>
-    <input type="text">
   </div>
   <div>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
-    <rocket-pokemon-card></rocket-pokemon-card>
+    <rocket-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></rocket-pokemon-card>
+  </div>
+  <div>
+    <button (click)="prev()" > Previous</button>
+    <button (click)="next()"> Next</button>
   </div>
 </section>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from './shared/services/user.service';
+import { Router } from '@angular/router';
+import { SessionContext } from './shared/context/session.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,17 @@ import { UserService } from './shared/services/user.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private userService: UserService){}
+  constructor(private sessionContext: SessionContext, private router: Router){}
 
 
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(res => {
-      console.log(res)
+    this.sessionContext.createSession().subscribe((res: any) => {
+      if(res.id) {
+        this.router.navigate(['pokemon'])
+      } else{
+        this.router.navigate(['/auth/login'])
+      }
     })
   }
 
