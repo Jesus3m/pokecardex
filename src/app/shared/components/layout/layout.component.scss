@@ -16,6 +16,7 @@ main {
     background: $dark-back;
 
     & .logo {
+      cursor: pointer;
       width: 20%;
       display: flex;
       justify-content: flex-start;

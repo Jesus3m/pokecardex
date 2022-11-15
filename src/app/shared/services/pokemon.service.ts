@@ -17,4 +17,7 @@ export class PokemonService {
       }
     })
   }
+  getPokemon(id: string){
+    return this.http.get(this.url + "/" + id)
+  }
 }
