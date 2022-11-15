@@ -38,15 +38,26 @@ main {
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 100%;
-        background: linear-gradient(45deg, $primary-light, $second-light);
         cursor: pointer;
       }
     }
   }
 
-
+  .red {
+    background-color: #ac0505;
+  }
+  .blue {
+    background-color: #0516ac;
+  }
+  .yellow {
+    background-color: #ac9b05;
+  }
+  .green {
+    background-color: #05ac05;
+  }
   & section {
-    height: 95vh;
+    min-height: 95vh;
+    height: auto;
     padding: 20px 10px;
   }
 }

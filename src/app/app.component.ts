@@ -13,13 +13,7 @@ export class AppComponent {
 
 
   ngOnInit(): void {
-    this.sessionContext.createSession().subscribe((res: any) => {
-      if(res.id) {
-        this.router.navigate(['pokemon'])
-      } else{
-        this.router.navigate(['/auth/login'])
-      }
-    })
+    this.sessionContext.createSession()
   }
 
 }

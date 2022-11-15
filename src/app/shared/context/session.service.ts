@@ -27,4 +27,7 @@ export class SessionContext {
   getSession(){
     return this.$user.asObservable()
   }
+  isAuthenticated(){
+    return !!this.$user.getValue()?.id || this.$session.getValue()?.refreshToken
+   }
 }

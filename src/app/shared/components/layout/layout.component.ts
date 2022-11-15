@@ -6,6 +6,7 @@ import { SessionContext } from '../../context/session.service';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
+
 export class LayoutComponent implements OnInit {
   user: any
   avatar: string = ""

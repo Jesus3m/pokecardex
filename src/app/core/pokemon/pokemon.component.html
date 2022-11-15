@@ -7,7 +7,6 @@
     <rocket-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></rocket-pokemon-card>
   </div>
   <div>
-    <button (click)="prev()" > Previous</button>
-    <button (click)="next()"> Next</button>
+    <nz-pagination [nzPageIndex]="page" [nzTotal]="total" [nzPageSize]="query.limit" (nzPageIndexChange)="changePage($event)"></nz-pagination>
   </div>
 </section>

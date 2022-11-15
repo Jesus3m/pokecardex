@@ -11,9 +11,10 @@ export class PokemonComponent implements OnInit {
   pokemons: Pokemon[]
   total: number = 0
   query = {
-    limit: 10,
+    limit: 12,
     offset: 0
   }
+  page = 0
   constructor(private pokemonService: PokemonService) {
     this.pokemons = []
   }
@@ -25,23 +26,13 @@ export class PokemonComponent implements OnInit {
     })
   }
 
-  next(){
-    if(this.total - this.query.limit >= this.query.offset){
-      this.query = {
-        ...this.query,
-        offset: this.query.offset + this.query.limit
-      }
-      this.getPokemons(this.query)
+  changePage(event: any){
+    this.page = event
+    this.query = {
+      ...this.query,
+      offset: this.query.limit * (event -1 )
     }
-  }
-  prev(){
-    if(this.query.offset >= 0){
-      this.query =   {
-        ...this.query,
-        offset: (this.query.offset - this.query.limit)
-      }
-      this.getPokemons(this.query)
-    }
+    this.getPokemons(this.query)
   }
   ngOnInit(): void {
     this.getPokemons(this.query)

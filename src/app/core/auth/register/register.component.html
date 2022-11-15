@@ -1,23 +1,33 @@
 <form [formGroup]="registerGroup" (ngSubmit)="onSubmit()">
   <h2>Become the best coach</h2>
-    <rocket-input name="name" label="Name" >
-      <input class="input-control" type="text" name="name" formControlName="name">
-      <input class="input-control" type="text" name="lastName" formControlName="lastName">
+    <rocket-input class="twice-control" name="name" label="Name" >
+      <div>
+        <input class="input-control" type="text" name="name" placeholder="first name" formControlName="name">
+        <input class="input-control" type="text" name="lastName" placeholder="last name" formControlName="lastName">
+      </div>
     </rocket-input>
     <rocket-input name="nickname" label="Nick Name" >
-      <input class="input-control" type="text" name="nickname" formControlName="nickname">
+      <input class="input-control" type="text" name="nickname" placeholder="enter your nickname" formControlName="nickname">
     </rocket-input>
     <rocket-input name="email" label="Email" >
-      <input class="input-control" type="text" name="email" formControlName="email">
+      <input class="input-control" type="text" name="email" placeholder="enter your email" formControlName="email">
     </rocket-input>
-    <rocket-input name="pass" label="Password" >
-      <input class="input-control" type="password" name="password" formControlName="password">
-    </rocket-input>
-    <rocket-input name="confirm-pass" label="Confirm Password" >
-      <input class="input-control" type="password" name="password" formControlName="password">
+    <rocket-input class="twice-control" name="pass" label="Password" >
+      <div>
+        <input class="input-control" type="password" placeholder="Enter your password" name="password"  formControlName="password">
+        <input class="input-control" type="password" placeholder="Confirm Your password" name="password" formControlName="password">
+      </div>
     </rocket-input>
     <rocket-input name="team" label="Team" >
-      <input class="input-control" type="password" name="team" formControlName="team">
+      <select class="input-control" name="team" formControlName="team">
+        <option value="red"> Red Team </option>
+        <option value="blue"> Blue Team </option>
+        <option value="red"> Yellow Team </option>
+        <option value="green"> Green Team </option>
+      </select>
     </rocket-input>
     <button class="button-control" type="submit">Register</button>
+    <span>
+     If you have an account  <a routerLink="/auth/login">Sign in here!</a>
+     </span>
 </form>
