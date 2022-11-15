@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { SessionContext } from './shared/context/session.service';
 
 @Component({
@@ -8,7 +7,7 @@ import { SessionContext } from './shared/context/session.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private sessionContext: SessionContext, private router: Router){}
+  constructor(private sessionContext: SessionContext){}
 
 
 

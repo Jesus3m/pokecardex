@@ -1,0 +1,23 @@
+<div class="profile-card">
+    <div class="profile-image">
+      <img [src]="image" alt="">
+    </div>
+    <div class="profile-content">
+      <h1>{{pokemon.name}}</h1>
+      <div>
+        <div>
+          <h3>Info:</h3>
+            <div>Weight: {{pokemon.weight}}</div>
+            <div>Height: {{pokemon.height}}</div>
+        </div>
+        <div>
+          <h3>Types: </h3>
+            <div *ngFor="let type of pokemon.types"> {{type.type.name}}</div>
+        </div>
+      </div>
+      <div class="chart">
+        <h3>Stats:</h3>
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+</div>

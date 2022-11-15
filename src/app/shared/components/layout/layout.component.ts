@@ -1,4 +1,5 @@
 import { Component, OnInit, } from '@angular/core';
+import { Router } from '@angular/router';
 import { SessionContext } from '../../context/session.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { SessionContext } from '../../context/session.service';
 export class LayoutComponent implements OnInit {
   user: any
   avatar: string = ""
-  constructor(private sessionContext: SessionContext) { }
+  constructor(private sessionContext: SessionContext, private router: Router) { }
 
   ngOnInit(): void {
     this.sessionContext.getUser().subscribe(res => {
@@ -18,5 +19,7 @@ export class LayoutComponent implements OnInit {
       this.avatar = this.user?.name?.split("")[0]
     })
   }
-
+  goToHome(){
+    this.router.navigate(["/pokemon"])
+  }
 }
