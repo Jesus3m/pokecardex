@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 import { ErrorInterceptor } from './shared/interceptors/error.interceptor';
+import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { SharedModule } from './shared/shared.module';
 
 registerLocaleData(en);
@@ -42,6 +43,11 @@ registerLocaleData(en);
       useClass: ErrorInterceptor,
       multi: true
     },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent],
   schemas: [

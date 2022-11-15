@@ -5,7 +5,7 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { InputComponent } from './components/input/input.component';
 import {ReactiveFormsModule} from '@angular/forms';
-
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     InputComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NzDropDownModule
   ],
   exports: [
     LayoutComponent,

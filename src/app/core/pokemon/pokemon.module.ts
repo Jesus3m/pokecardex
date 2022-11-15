@@ -18,6 +18,7 @@ import { ProfileComponent } from './profile/profile.component';
     CommonModule,
     PokemonRoutingModule,
     NzPaginationModule,
+
   ],
   providers: [
   ],
