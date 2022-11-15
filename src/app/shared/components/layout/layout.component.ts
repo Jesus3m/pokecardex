@@ -22,4 +22,9 @@ export class LayoutComponent implements OnInit {
   goToHome(){
     this.router.navigate(["/pokemon"])
   }
+  logout(){
+    this.sessionContext.deleteSession()
+    this.router.navigate(["/auth/login"])
+
+  }
 }

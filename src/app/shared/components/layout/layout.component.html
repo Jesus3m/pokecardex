@@ -5,9 +5,14 @@
     </div>
     <div class="options">
       <h3>{{user.name}} {{user.lastName}}</h3>
-        <div [class]="'avatar ' + user.team">
+        <a nz-dropdown [nzDropdownMenu]="menu" [class]="'avatar ' + user.team">
           <div>{{avatar}}</div>
-        </div>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-item (click)="logout()">Logout</li>
+          </ul>
+        </nz-dropdown-menu>
     </div>
   </nav>
   <section>

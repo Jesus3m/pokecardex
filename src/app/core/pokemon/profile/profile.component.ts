@@ -21,7 +21,6 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('name')!
     this.pokemonService.getPokemon(id).subscribe((res: any) => {
-      console.log(res)
       this.pokemon = res.data
       this.image = this.image + res.data.id + '.png'
       this.types = this.pokemon.types

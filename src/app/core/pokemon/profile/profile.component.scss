@@ -1,6 +1,7 @@
 @import '../../../shared/styles/colors';
 .profile-card {
   width: 80%;
+  max-width: 700px;
   margin: auto;
   background-color: $light-back;
   border-radius: 8px;

@@ -20,7 +20,11 @@ export class SessionContext {
     this.$session.next(session);
     return this.$user.asObservable()
   }
-
+  deleteSession(){
+    localStorage.removeItem("refresh")
+    this.$session.next(undefined)
+    this.$user.next(null)
+  }
   getUser(){
     return this.$user.asObservable()
   }
