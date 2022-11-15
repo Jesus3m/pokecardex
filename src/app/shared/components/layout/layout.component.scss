@@ -1,0 +1,63 @@
+@import '../../styles/colors';
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $main-back;
+
+
+  & nav {
+    color: $contrast-text;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    background: $dark-back;
+
+    & .logo {
+      width: 20%;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      align-items: center;
+    }
+
+    & .options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      & .avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 800;
+        color: $contrast-text;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .red {
+    background-color: #ac0505;
+  }
+  .blue {
+    background-color: #0516ac;
+  }
+  .yellow {
+    background-color: #ac9b05;
+  }
+  .green {
+    background-color: #05ac05;
+  }
+  & section {
+    min-height: 95vh;
+    height: auto;
+    padding: 20px 10px;
+  }
+}

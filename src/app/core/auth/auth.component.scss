@@ -1,0 +1,24 @@
+@import '../../shared/styles/colors';
+
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  div.form {
+    width: 80%;
+    max-width: 650px;
+    min-height: 50%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $light-back;
+    border-radius: 8px;
+    box-shadow: $main-shadow;
+  }
+

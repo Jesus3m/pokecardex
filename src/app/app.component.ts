@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SessionContext } from './shared/context/session.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'rocketfy-pokemon';
+  constructor(private sessionContext: SessionContext, private router: Router){}
+
+
+
+  ngOnInit(): void {
+    this.sessionContext.createSession()
+  }
+
 }

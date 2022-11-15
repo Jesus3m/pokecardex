@@ -1,0 +1,12 @@
+
+<section >
+  <div class="search">
+    <h3>Elije a tu pokemon!!!</h3>
+  </div>
+  <div>
+    <rocket-pokemon-card *ngFor="let pokemon of pokemons" [pokemon]="pokemon"></rocket-pokemon-card>
+  </div>
+  <div>
+    <nz-pagination [nzPageIndex]="page" [nzTotal]="total" [nzPageSize]="query.limit" (nzPageIndexChange)="changePage($event)"></nz-pagination>
+  </div>
+</section>
