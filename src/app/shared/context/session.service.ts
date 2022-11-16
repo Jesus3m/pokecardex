@@ -14,7 +14,7 @@ export class SessionContext {
       localStorage.setItem("refresh", session.refreshToken)
     }
     const token = localStorage.getItem('refresh') || session?.refreshToken
-    this.userService.getUser(token).subscribe((res: any) => {
+    token && this.userService.getUser(token).subscribe((res: any) => {
       this.$user.next(res.data)
     })
     this.$session.next(session);
